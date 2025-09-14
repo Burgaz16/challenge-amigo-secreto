@@ -33,4 +33,19 @@ function actualizarListaAmigos(){
        lista.innerHTML += `<li>${amigos[i]}</li>`;
         
     }
+    return;
+}
+
+
+function sortearAmigo() {
+    let validarListaAmigos = amigos.length;
+    if (validarListaAmigos === 0) {
+        alert('No agregaste ningún amigo a la lista, por favor agregue uno.')
+    }else {
+        let generarIndiceAleatorio = Math.floor(Math.random() * amigos.length);
+        let resultado = amigos[generarIndiceAleatorio];
+        document.getElementById("resultado").innerHTML = `El amigo secreto es ${resultado}`;
+
+    }
+    return;
 }
